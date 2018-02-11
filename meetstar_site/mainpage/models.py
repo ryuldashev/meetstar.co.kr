@@ -21,8 +21,7 @@ class Events(models.Model):
         self.save()
 
     def upcoming(self):
-        up_events = Events.objects.filter(date__gt=datetime.datetime.now)
-        return up_events
+        return Events.objects.filter(date__gt=datetime.datetime.now)
 
     def __str__(self):
         return 'Event: {0}'.format(self.title)

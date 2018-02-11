@@ -25,5 +25,5 @@ def randomize(request):
     return HttpResponse(event)
 
 def upcoming(request):
-    up_events = request.GET.get['event']
+    up_events = request.GET['event']
     return HttpResponse(up_events)
